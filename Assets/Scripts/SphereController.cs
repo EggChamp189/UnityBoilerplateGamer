@@ -16,6 +16,8 @@ public class SphereController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // another movement function
+        // Input.GetAxisRaw("Horizontal") * speed 
         Vector3 cur = gameObject.GetComponent<Rigidbody>().velocity;
         if (Input.GetKey(KeyCode.LeftArrow)) {
             gameObject.GetComponent<Rigidbody>().velocity = new Vector3(System.Math.Clamp(cur.x - 0.1f, -val, val), cur.y, 0);
