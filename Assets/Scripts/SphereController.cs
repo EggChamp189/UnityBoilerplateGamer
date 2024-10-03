@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
+//using UnityEditor.UI;
 using UnityEngine;
 
 public class SphereController : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    float val = 1000f;
+
     void Start()
     {
         
@@ -16,11 +19,11 @@ public class SphereController : MonoBehaviour
     {
         Vector3 cur = gameObject.GetComponent<Rigidbody>().velocity;
         if (Input.GetKey(KeyCode.LeftArrow)) {
-            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(System.Math.Clamp(cur.x - 0.1f, -6f, 6f), cur.y, 0);
+            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(System.Math.Clamp(cur.x - 0.1f, -val, val), cur.y, 0);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(System.Math.Clamp(cur.x + 0.1f, -6f, 6f), cur.y, 0);
+            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(System.Math.Clamp(cur.x + 0.1f, -val, val), cur.y, 0);
         }
     }
 }
