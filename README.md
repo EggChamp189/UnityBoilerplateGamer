@@ -1,4 +1,4 @@
-# Unity WebGL CI/CD with GitHub Actions
+# Unity WebGL CI/CD with GitHub Actions 
 
 WebGL published here https://eggchamp189.github.io/UnityBoilerplateGamer/
 
